@@ -11,7 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: Text(""),
+        appBar: AppBar(
+          title: Center(
+            child: Text("Bangladesh"),
+          ),
+        ),
         body: Center(
           child: Stack(
             alignment: Alignment.center,
