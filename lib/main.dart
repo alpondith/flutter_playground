@@ -9,30 +9,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var name = "Twinkle, twinkle, little star \nHow I wonder what you are \nUp above the world so high \nLike a diamond in the sky";
+
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text("Bangladesh"),
-          ),
-        ),
-        body: Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                height: 200,
-                width: 300,
-                color: Colors.green,
-              ),
-              Container(
-                height: 100,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.red,
+        body: SafeArea(
+          child: Container(
+            width: double.infinity,
+            color: Colors.amber,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  name,
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
