@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GreenSquare extends StatelessWidget {
-  const GreenSquare({Key? key}) : super(key: key);
+class GreenRectangle extends StatelessWidget {
+  const GreenRectangle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

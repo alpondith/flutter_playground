@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'components/green_square.dart';
-import 'components/red_circle.dart';
+import 'bd_flag.dart';
 
 class Flag extends StatelessWidget {
   const Flag({Key? key}) : super(key: key);
@@ -11,13 +10,7 @@ class Flag extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              GreenSquare(),
-              RedCircle(),
-            ],
-          ),
+          child: BDFlag(),
         ),
       ),
     );
