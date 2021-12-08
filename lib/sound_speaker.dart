@@ -1,13 +1,15 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
-class ExpandedTile extends StatelessWidget {
+class SoundSpeaker extends StatelessWidget {
   final Color color;
   final String audio;
-  const ExpandedTile({
+  final String title;
+  const SoundSpeaker({
     Key? key,
-    required this.color,
+    this.color = Colors.white,
     required this.audio,
+    this.title = '',
   }) : super(key: key);
 
   @override
@@ -16,12 +18,21 @@ class ExpandedTile extends StatelessWidget {
       flex: 1,
       child: InkWell(
         onTap: () {
-          AudioPlayer().play("assets/$audio.mp3", isLocal: true);
+          AudioPlayer().play(audio, isLocal: true);
         },
         child: Container(
           color: color,
           height: double.infinity,
           width: double.infinity,
+          child: Center(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontSize: 15,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ),
       ),
     );
