@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:audioplayers/audioplayers.dart';
+import 'package:flutter_playground/colors.dart';
+
+import 'expanded_tile.dart';
 
 void main() => runApp(App());
 
@@ -11,19 +13,23 @@ class App extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: ElevatedButton.icon(
-            onPressed: playSound,
-            icon: Icon(Icons.play_arrow, size: 18),
-            label: Text("Play"),
-          ),
+        body: Column(
+          children: [
+            ExpandedTile(
+              color: ThemeColors.PRIMARY,
+              audio: "beep",
+            ),
+            ExpandedTile(
+              color: Colors.green,
+              audio: "sound",
+            ),
+            ExpandedTile(
+              color: Colors.blue,
+              audio: "beep",
+            ),
+          ],
         ),
       ),
     );
-  }
-
-  void playSound() {
-    AudioPlayer audioPlayer = AudioPlayer();
-    audioPlayer.play("assets/beep.mp3", isLocal: true);
   }
 }
